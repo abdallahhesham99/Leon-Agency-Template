@@ -1,3 +1,6 @@
+::root {
+}
+
 /* Global Rules  */
 * {
   box-sizing: border-box;
@@ -6,4 +9,36 @@
 }
 body {
   font-family: "Work Sans", sans-serif;
+}
+
+/*==================Layout===================*/
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin: 0 auto;
+  background: #eee;
+}
+
+/*Small Screen*/
+@media screen and (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+
+/*Medium Screen*/
+@media screen and (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+/*Large Screen*/
+@media screen and (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+
+div {
+  background-color: red;
 }
