@@ -10,13 +10,17 @@
 body {
   font-family: "Work Sans", sans-serif;
 }
+a {
+  text-decoration: none;
+}
+ul li {
+  list-style-type: none;
+}
 
-/*==================Layout===================*/
 .container {
   padding-left: 15px;
   padding-right: 15px;
   margin: 0 auto;
-  background: #eee;
 }
 
 /*Small Screen*/
@@ -39,6 +43,44 @@ body {
   }
 }
 
-div {
-  background-color: red;
+/*End Global Rules  */
+
+/* Start Header */
+.header {
+  padding: 20px;
 }
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.nav__logo img {
+  width: 70px;
+}
+
+.nav__links {
+  position: relative;
+}
+
+.burger__icon {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  width: 30px;
+}
+.burger__icon span {
+  background-color: #333;
+  margin-bottom: 5px;
+  height: 2px;
+  width: 100%;
+}
+.burger__icon span:first-child {
+}
+.burger__icon span:nth-child(2) {
+  width: 60%;
+  transition: 300ms;
+}
+.burger__icon:hover span:nth-child(2) {
+  width: 100%;
+}
+/* End Header */
