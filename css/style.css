@@ -492,8 +492,10 @@ ul.social__links li.social__link a {
   }
   .social__info {
     padding-left: 1rem;
+    flex-direction: column;
   }
   ul.social__links li.social__link {
+    margin-top: var(--mb-1);
     margin-left: var(--mb-0-5);
   }
 }
