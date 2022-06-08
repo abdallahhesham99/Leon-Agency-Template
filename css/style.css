@@ -3,6 +3,7 @@
   --main-color: #10cab7;
   --sec-color: #2c4755;
   --lighter-color: #f6f6f6;
+  --sec-lighter-color: #ebeced;
   --white-color: #fff;
   --title-color: #333;
   --bg-color: #fafafa;
@@ -17,6 +18,7 @@
   --mb-2-5: 2.5rem;
   --mb-3: 3rem;
 
+  --section-container-mt: 100px;
   /* ============================================= */
 }
 /* End Variables */
@@ -94,7 +96,7 @@ p {
   letter-spacing: -3px;
 }
 .section__desc {
-  margin: -50px 0 0;
+  margin: -40px 0 0;
 }
 @media screen and (max-width: 575px) {
   .section__title {
@@ -246,7 +248,7 @@ p {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   grid-gap: 80px;
-  margin-top: 100px;
+  margin-top: var(--section-container-mt);
 }
 
 .service__item {
@@ -313,3 +315,33 @@ p {
 }
 
 /* End Services */
+/* ================================================================================= */
+/*start portfolio*/
+.portfolio {
+  background-color: var(--bg-color);
+}
+.portfolio .section__title {
+  color: var(--sec-lighter-color);
+}
+
+.portfolio__container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-gap: 30px;
+  margin-top: var(--section-container-mt);
+}
+.portfolio__card {
+  background-color: var(--white-color);
+}
+.portfolio__img {
+  max-width: 100%;
+}
+.portfolio__card-content {
+  padding: 12px;
+}
+
+.portfolio__card-title {
+  margin-bottom: var(--mb-0-5);
+}
+
+/*end portfolio*/
