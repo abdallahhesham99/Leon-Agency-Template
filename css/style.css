@@ -2,6 +2,7 @@
 :root {
   --main-color: #10cab7;
   --sec-color: #2c4755;
+  --third-color: #334752;
   --lighter-color: #f6f6f6;
   --sec-lighter-color: #ebeced;
   --white-color: #fff;
@@ -399,7 +400,7 @@ p {
 .about__info-desc:first-of-type {
   font-weight: 900;
   line-height: 2.4;
-  color: #334752;
+  color: var(--third-color);
   margin-bottom: var(--mb-2);
 }
 hr {
@@ -440,5 +441,73 @@ hr {
 /* End about  */
 /*===================================================================*/
 /* Start contact  */
+.contact.section {
+  background-color: var(--bg-color);
+}
+.contact .section__title {
+  color: var(--sec-lighter-color);
+}
+.contact__container {
+  margin-top: var(--section-container-mt);
+}
+.contact__info {
+  padding-left: 8rem;
+}
+.contact__label {
+  font-size: 2rem;
+  font-weight: 900;
+  color: var(--sec-color);
+}
+.contact__link {
+  display: inline-block;
+  font-size: 2rem;
+  color: var(--main-color);
+  font-weight: 900;
+  padding-left: 2rem;
+  margin-bottom: var(--mb-1-5);
+}
+.social__info {
+  padding-left: 4rem;
+  display: flex;
+}
+.social__info span {
+  color: var(--third-color);
+}
+ul.social__links li.social__link {
+  display: inline-block;
+  margin-left: var(--mb-1);
+}
+ul.social__links li.social__link a {
+  font-size: 1.4rem;
+  color: var(--third-color);
+}
 
+@media screen and (max-width: 769px) {
+  .contact__info {
+    padding-left: 1.5rem;
+  }
+  .contact__link {
+    padding-left: 1rem;
+    font-size: 1.5rem;
+  }
+  .social__info {
+    padding-left: 1rem;
+  }
+  ul.social__links li.social__link {
+    margin-left: var(--mb-0-5);
+  }
+}
 /*end contact*/
+
+.footer {
+  padding: 50px 0;
+  background-color: var(--sec-color);
+  text-align: center;
+}
+.footer__title {
+  color: var(--white-color);
+  font-weight: 900;
+}
+.footer__title span {
+  color: var(--main-color);
+}
