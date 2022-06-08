@@ -1,9 +1,11 @@
 /* Start Variables */
 :root {
   --main-color: #10cab7;
+  --sec-color: #2c4755;
+  --lighter-color: #f6f6f6;
   --white-color: #fff;
   --title-color: #333;
-  --bg-color: #f6f6f6;
+  --bg-color: #fafafa;
   --transition-300: 300ms;
   /*=============== Margins ==================*/
   --mb-0-25: 0.25rem;
@@ -43,10 +45,14 @@ ul li {
 }
 p {
   color: #545b6b;
-  font-family: Arial;
+  font-family: Arial, sans-serif;
   font-size: 15px;
-  padding: 10px 5px;
+  /* padding: 10px 5px; */
+  line-height: 1.6;
 }
+/*End Global Rules  */
+/* ======================================================================= */
+/* Start Layout  */
 .container {
   padding-left: 15px;
   padding-right: 15px;
@@ -72,12 +78,34 @@ p {
     width: 1170px;
   }
 }
-
+/* End Layout  */
+/* ================================================================= */
+/*  Start Reusable css classes */
 .section {
   padding: 4rem 0;
 }
-/*End Global Rules  */
-
+.section__header {
+  text-align: center;
+}
+.section__title {
+  color: var(--lighter-color);
+  font-size: 6rem;
+  font-weight: 800;
+  letter-spacing: -3px;
+}
+.section__desc {
+  margin: -50px 0 0;
+}
+@media screen and (max-width: 575px) {
+  .section__title {
+    font-size: 4.8rem;
+  }
+  .section__desc {
+    margin: -45px 0 0;
+  }
+}
+/* End Reusable css classes */
+/* ============================================================================================= */
 /* Start Header */
 .header {
   position: fixed;
@@ -160,9 +188,11 @@ p {
   position: relative;
   height: 100vh;
 
-  background: url(../images/homebg.webp);
-  background-position: center center;
+  background: url(../images/mountain.jpg);
+  background-position: center -50%;
   background-size: cover;
+  background-blend-mode: darken;
+  background-color: rgba(255, 255, 255, 0.596);
 }
 
 .home__content {
@@ -186,9 +216,7 @@ p {
 /* End Home */
 /* ================================================================================= */
 /* Start Features */
-.features {
-  background-color: var(--bg-color);
-}
+
 .features__container {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -197,6 +225,12 @@ p {
 .feature__item {
   text-align: center;
   padding: 18px;
+  transition: var(--transition-300);
+}
+.feature__item:hover {
+  box-shadow: 3px 5px 5px 0px rgba(0, 0, 0, 0.09);
+  -webkit-box-shadow: 3px 5px 5px 0px rgba(0, 0, 0, 0.09);
+  -moz-box-shadow: 3px 5px 5px 0px rgba(0, 0, 0, 0.09);
 }
 .feature__icon {
   color: var(--main-color);
@@ -205,7 +239,77 @@ p {
   font-weight: 800;
   margin-top: var(--mb-2);
 }
-.feature__description {
-  line-height: 1.7;
-}
 /* End Features */
+/* ================================================================================= */
+/* Start Services */
+.services__container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-gap: 80px;
+  margin-top: 100px;
+}
+
+.service__item {
+  display: flex;
+  margin-bottom: 40px;
+}
+
+.service__icon {
+  flex-basis: 60px;
+  color: var(--main-color);
+}
+
+.service__item-content {
+  flex: 1;
+}
+.service__title {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+.service__description {
+  font-weight: 300;
+}
+
+.services__img {
+  position: relative;
+  text-align: center;
+}
+.services__img:before {
+  content: "";
+  position: absolute;
+  height: calc(100% + 100px);
+  width: 80px;
+  top: -50px;
+  right: 0;
+  background-color: var(--sec-color);
+  z-index: -1;
+}
+.services__img img {
+  width: 260px;
+}
+
+@media screen and (max-width: 1199px) {
+  .services__container .services__img {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .service__item {
+    flex-direction: column;
+    text-align: center;
+    min-height: 200px;
+  }
+}
+@media screen and (max-width: 709px) {
+  .services__container {
+    grid-gap: 40px;
+  }
+}
+@media screen and (max-width: 669px) {
+  .service__item:nth-child(2) {
+    margin-bottom: 0px;
+  }
+}
+
+/* End Services */
