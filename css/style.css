@@ -23,11 +23,17 @@
 }
 /* End Variables */
 
+/* Global Rules  */
+
+html {
+  scroll-behavior: smooth;
+}
+
 ::selection {
   color: var(--white-color);
   background-color: var(--main-color);
 }
-/* Global Rules  */
+
 * {
   box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -84,7 +90,8 @@ p {
 /* ================================================================= */
 /*  Start Reusable css classes */
 .section {
-  padding: 4rem 0;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
 }
 .section__header {
   text-align: center;
@@ -345,3 +352,58 @@ p {
 }
 
 /*end portfolio*/
+/*===================================================================*/
+/* Start about  */
+.about.section {
+  padding-bottom: calc(4rem + 60px);
+}
+.about__container {
+  margin-top: var(--section-container-mt);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+.about__img {
+  position: relative;
+  width: 300px;
+  height: 330px;
+}
+.about__img::before {
+  content: "";
+  position: absolute;
+  top: -50px;
+  left: -20px;
+  background-color: var(--bg-color);
+  width: 80px;
+  height: calc(100% + 100px);
+  z-index: -1;
+}
+.about__img::after {
+  content: "";
+  position: absolute;
+  top: -20px;
+  right: -108px;
+  width: 80px;
+  height: 70%;
+  border-left: 70px solid var(--main-color);
+  border-bottom: 60px solid var(--main-color);
+  z-index: -1;
+}
+.about__img img {
+  max-width: 100%;
+}
+
+.about__info {
+}
+.about__info-desc {
+}
+.about__info-desc:first-of-type {
+  font-weight: 900;
+  color: #334752;
+}
+hr {
+  width: 50%;
+  border: 1px solid var(--main-color);
+}
+/* End about  */
