@@ -9,3 +9,12 @@ burgerButton.addEventListener("click", () => {
 closeButton.addEventListener("click", () => {
   sideMenu.classList.remove("open");
 });
+
+//================ Remove Menu When Click on Nav Links=================================
+
+const navLinks = document.querySelectorAll(".nav_link a");
+
+function linkAction() {
+  sideMenu.classList.remove("open");
+}
+navLinks.forEach((navLink) => navLink.addEventListener("click", linkAction));
