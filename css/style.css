@@ -167,11 +167,16 @@ p {
 }
 /* Classes for open and close side menu  */
 .nav__links ul.open {
-  width: 100%;
+  width: 40%;
+}
+@media screen and (max-width: 767px) {
+  .nav__links ul.open {
+    width: 100%;
+  }
 }
 
 /* =========================================== */
-.nav_link{
+.nav_link {
   margin-left: var(--mb-2);
 }
 .close__icon-btn {
