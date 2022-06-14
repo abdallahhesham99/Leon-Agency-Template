@@ -135,7 +135,7 @@ p {
 }
 
 .nav__links {
-  position: relative;
+  /* position: relative; */
 }
 
 .burger__icon {
@@ -143,6 +143,7 @@ p {
   flex-wrap: wrap;
   justify-content: flex-end;
   width: 30px;
+  cursor: pointer;
 }
 .burger__icon span {
   background-color: var(--title-color);
@@ -159,35 +160,40 @@ p {
   width: 100%;
 }
 .nav__links ul {
-  position: absolute;
-  top: calc(100% + 15px);
+  position: fixed;
+  top: 0;
   right: 0;
-  background-color: var(--bg-color);
+  width: 0%;
+  height: 100vh;
+  background-color: var(--sec-color);
   margin: 0;
-  min-width: 200px;
-  display: none;
+  transition: var(--transition-300);
 }
-.nav__links:hover ul {
+/* Classes for open and close side menu  */
+.nav__links ul.open {
+  width: 100%;
+}
+
+/* =========================================== */
+.close__icon-btn {
+  cursor: pointer;
+  padding-left: 15px;
+  margin: var(--mb-1) 0;
+}
+.nav_link a,
+.close__icon-btn {
+  font-size: 20px;
   display: block;
-}
-.nav__links ul:before {
-  content: "";
-  position: absolute;
-  top: -20px;
-  right: 5px;
-  border: 10px solid;
-  border-color: transparent transparent var(--bg-color) transparent;
+  color: white;
+  font-weight: 300;
 }
 .nav_link a {
-  display: block;
   padding: 15px;
   transition: var(--transition-300);
 }
-.nav_link:not(:last-of-type) {
-  border-bottom: 1px solid #ddd;
-}
 .nav_link a:hover {
-  padding-left: 25px;
+  /* padding-left: 25px; */
+  color: var(--main-color);
 }
 
 /* End Header */
@@ -201,7 +207,7 @@ p {
   background-position: center -50%;
   background-size: cover;
   background-blend-mode: darken;
-  background-color: rgba(255, 255, 255, 0.596);
+  background-color: rgba(211, 211, 211, 0.5);
 }
 
 .home__content {
