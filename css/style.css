@@ -134,10 +134,6 @@ p {
   width: 70px;
 }
 
-.nav__links {
-  /* position: relative; */
-}
-
 .burger__icon {
   display: flex;
   flex-wrap: wrap;
@@ -175,6 +171,9 @@ p {
 }
 
 /* =========================================== */
+.nav_link{
+  margin-left: var(--mb-2);
+}
 .close__icon-btn {
   cursor: pointer;
   padding-left: 15px;
@@ -183,7 +182,7 @@ p {
 .nav_link a,
 .close__icon-btn {
   font-size: 20px;
-  display: block;
+  display: inline-block;
   color: white;
   font-weight: 300;
 }
